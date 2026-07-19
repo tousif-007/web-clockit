@@ -1,0 +1,69 @@
+
+    :root {
+      --bg-deep: #0a0e27;
+      --bg-surface: #1a1f3a;
+      --neon-teal: #4b5563;
+      --accent-green: #4b5563;
+    }
+    
+    body {
+      font-family: 'Satoshi', sans-serif;
+      background-color: var(--bg-deep);
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Clash Grotesk', sans-serif;
+    }
+
+    .neon-glow {
+      text-shadow: 0 0 10px rgba(75, 85, 99, 0.5);
+    }
+
+    .neon-border {
+      border: 1px solid rgba(75, 85, 99, 0.3);
+      box-shadow: 0 0 15px rgba(75, 85, 99, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .neon-border:hover {
+      border-color: var(--neon-teal);
+      box-shadow: 0 0 25px rgba(75, 85, 99, 0.3);
+      transform: translateY(-5px);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .animate-float-custom {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gradient-text {
+      color: #ffffff;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: var(--bg-deep);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: var(--bg-surface);
+      border-radius: 10px;
+    }

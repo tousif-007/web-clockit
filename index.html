@@ -10,77 +10,8 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
   <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&amp;f[]=satoshi@300,400,500,700&amp;display=swap" rel="stylesheet">
-  
-  <style>
-    :root {
-      --bg-deep: #0a0e27;
-      --bg-surface: #1a1f3a;
-      --neon-teal: #4b5563;
-      --accent-green: #4b5563;
-    }
-    
-    body {
-      font-family: 'Satoshi', sans-serif;
-      background-color: var(--bg-deep);
-      color: #e2e8f0;
-      overflow-x: hidden;
-    }
 
-    h1, h2, h3 {
-      font-family: 'Clash Grotesk', sans-serif;
-    }
-
-    .neon-glow {
-      text-shadow: 0 0 10px rgba(75, 85, 99, 0.5);
-    }
-
-    .neon-border {
-      border: 1px solid rgba(75, 85, 99, 0.3);
-      box-shadow: 0 0 15px rgba(75, 85, 99, 0.1);
-      transition: all 0.3s ease;
-    }
-
-    .neon-border:hover {
-      border-color: var(--neon-teal);
-      box-shadow: 0 0 25px rgba(75, 85, 99, 0.3);
-      transform: translateY(-5px);
-    }
-
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-
-    .animate-float-custom {
-      animation: float 6s ease-in-out infinite;
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(30px);
-      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-
-    .reveal.active {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .gradient-text {
-      color: #ffffff;
-    }
-
-    .custom-scrollbar::-webkit-scrollbar {
-      width: 6px;
-    }
-    .custom-scrollbar::-webkit-scrollbar-track {
-      background: var(--bg-deep);
-    }
-    .custom-scrollbar::-webkit-scrollbar-thumb {
-      background: var(--bg-surface);
-      border-radius: 10px;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -346,28 +277,7 @@
     </footer>
 
   </div>
-
-  <!-- JavaScript Animations -->
-  <script>
-    const observerOptions = { threshold: 0.1 };
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    window.addEventListener('scroll', () => {
-      const scrolled = window.pageYOffset;
-      const parallaxElements = document.querySelectorAll('.animate-float-custom');
-      parallaxElements.forEach(el => {
-        el.style.transform = `translateY(${scrolled * 0.03}px)`;
-      });
-    });
-  </script>
+  <script src="js/script.js"></script>
 
 </body>
 </html>
