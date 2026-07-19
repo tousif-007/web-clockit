@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tousif Siddique | Personal Portfolio</title>
+  <meta name="description" content="Personal portfolio of Tousif Siddique, a student freelancer from Dhaka building AI websites and tech solutions.">
+  
+  <!-- Tailwind CDN & Iconify -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+  <link href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400,500,600,700&amp;f[]=satoshi@300,400,500,700&amp;display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg-deep: #0a0e27;
+      --bg-surface: #1a1f3a;
+      --neon-teal: #4b5563;
+      --accent-green: #4b5563;
+    }
+    
+    body {
+      font-family: 'Satoshi', sans-serif;
+      background-color: var(--bg-deep);
+      color: #e2e8f0;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Clash Grotesk', sans-serif;
+    }
+
+    .neon-glow {
+      text-shadow: 0 0 10px rgba(75, 85, 99, 0.5);
+    }
+
+    .neon-border {
+      border: 1px solid rgba(75, 85, 99, 0.3);
+      box-shadow: 0 0 15px rgba(75, 85, 99, 0.1);
+      transition: all 0.3s ease;
+    }
+
+    .neon-border:hover {
+      border-color: var(--neon-teal);
+      box-shadow: 0 0 25px rgba(75, 85, 99, 0.3);
+      transform: translateY(-5px);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    .animate-float-custom {
+      animation: float 6s ease-in-out infinite;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .gradient-text {
+      color: #ffffff;
+    }
+
+    .custom-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    .custom-scrollbar::-webkit-scrollbar-track {
+      background: var(--bg-deep);
+    }
+    .custom-scrollbar::-webkit-scrollbar-thumb {
+      background: var(--bg-surface);
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="min-h-screen bg-[#0a0e27] selection:bg-gray-700/50 selection:text-white">
+    
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0a0e27]/80 backdrop-blur-md border-b border-white/5">
+      <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="text-2xl font-bold tracking-tighter gradient-text">TOUSIF</div>
+        <div class="hidden md:flex items-center gap-10 text-sm font-medium tracking-wide">
+          <a href="#home" id="nav-home" class="hover:text-white transition-colors">HOME</a>
+          <a href="#about" id="nav-about" class="hover:text-white transition-colors">ABOUT</a>
+          <a href="#services" id="nav-services" class="hover:text-white transition-colors">SERVICES</a>
+          <a href="#contact" id="nav-contact" class="px-5 py-2 rounded-full border border-gray-700 hover:bg-gray-800 transition-all">LET'S TALK</a>
+        </div>
+        <button class="md:hidden text-2xl text-white">
+          <iconify-icon icon="lucide:menu"></iconify-icon>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative pt-32 pb-20 px-6 overflow-hidden min-h-[90vh] flex items-center">
+      <!-- Grid Background -->
+      <div class="absolute inset-0 z-0 opacity-10 pointer-events-none" style="background-image: linear-gradient(#374151 1px, transparent 1px), linear-gradient(90deg, #374151 1px, transparent 1px); background-size: 50px 50px;"></div>
+      
+      <div class="max-w-7xl mx-auto grid md:grid-cols-12 items-center gap-12 relative z-10">
+        <div class="md:col-span-7 space-y-8">
+          <div class="space-y-4">
+            <h1 class="text-5xl md:text-8xl font-bold tracking-tight reveal active">
+              Hi, I'm <br>
+              <span class="gradient-text">Tousif Siddique</span>
+            </h1>
+            <p class="text-xl md:text-2xl font-medium text-slate-300 max-w-2xl reveal active" style="transition-delay: 200ms">
+              A Student, Building Websites &amp; Tech Solutions
+            </p>
+          </div>
+
+          <p class="text-slate-400 text-lg max-w-xl leading-relaxed reveal active" style="transition-delay: 400ms">
+            I help individuals and small businesses with <span class="text-gray-300">AI-powered websites</span>, micro-investing tips, and taxation guidance. I mess up sometimes... but I always turn it into a <span class="italic font-bold text-white uppercase">BIG W</span>.
+          </p>
+
+          <div class="flex flex-wrap gap-4 pt-4 reveal active" style="transition-delay: 600ms">
+            <a href="https://wa.me/8801992680919" id="cta-whatsapp" class="px-8 py-4 border border-purple-500/50 hover:bg-purple-500/10 text-white font-bold rounded-xl transition-all flex items-center gap-2">
+              <iconify-icon icon="logos:whatsapp-icon" class="text-xl"></iconify-icon>
+              WhatsApp Me
+            </a>
+          </div>
+        </div>
+
+        <div class="md:col-span-5 relative">
+          <div class="relative z-10 animate-float-custom">
+             <img src="https://vgbujcuwptvheqijyjbe.supabase.co/storage/v1/object/public/hmac-uploads/uploads/aeea65e3-1b31-4f4e-a698-58d3cb31795d/1784196638771-33309188/image.png" alt="Tousif Avatar" class="w-full max-w-[400px] mx-auto drop-shadow-[0_0_50px_rgba(255,255,255,0.1)]">
+          </div>
+          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-gray-700/10 blur-[100px] rounded-full -z-10"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 px-6 relative">
+      <div class="max-w-4xl mx-auto">
+        <div class="reveal">
+          <h2 class="text-3xl md:text-5xl font-bold mb-8 flex items-center gap-4">
+            About Me
+          </h2>
+          <div class="bg-white/5 border border-white/10 p-8 md:p-12 rounded-3xl backdrop-blur-sm">
+            <p class="text-xl md:text-2xl text-slate-300 leading-relaxed">
+              I am a <span class="text-white font-bold underline decoration-gray-500 decoration-4">Student</span> helping people with technology. I build affordable professional websites using AI, guide on micro-investing, and simplify taxation.
+            </p>
+            <p class="mt-6 text-lg text-slate-400">
+              Not perfect, but persistent and results-driven. I believe that tech should be accessible to everyone, from local dental clinics to budding entrepreneurs in Dhaka.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 px-6 bg-[#1a1f3a]/50">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16 reveal">
+          <h2 class="text-4xl md:text-6xl font-bold mb-4">What I Offer</h2>
+          <p class="text-slate-400">Modern solutions for modern problems</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <!-- Card 1 -->
+          <div class="neon-border p-8 rounded-3xl bg-white/5 flex flex-col items-start gap-4 reveal" style="transition-delay: 100ms">
+            <div class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center">
+              <iconify-icon icon="lucide:bot" class="text-2xl text-gray-300"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-bold">AI-Powered Websites</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Custom websites built with AI efficiency. Ideal for individuals and small businesses looking for quality on a budget.
+            </p>
+          </div>
+          <!-- Card 2 -->
+          <div class="neon-border p-8 rounded-3xl bg-white/5 flex flex-col items-start gap-4 reveal" style="transition-delay: 200ms">
+            <div class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center">
+              <iconify-icon icon="lucide:wrench" class="text-2xl text-gray-300"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-bold">Tech Help &amp; Tools</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Solving your technical headaches. From setup to automation tools that save you hours every week.
+            </p>
+          </div>
+          <!-- Card 3 -->
+          <div class="neon-border p-8 rounded-3xl bg-white/5 flex flex-col items-start gap-4 reveal" style="transition-delay: 300ms">
+            <div class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center">
+              <iconify-icon icon="lucide:trending-up" class="text-2xl text-gray-300"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-bold">Micro-Investment</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Guidance on how to start small and grow big. Simplified financial tips for students and early-career starters.
+            </p>
+          </div>
+          <!-- Card 4 -->
+          <div class="neon-border p-8 rounded-3xl bg-white/5 flex flex-col items-start gap-4 reveal" style="transition-delay: 400ms">
+            <div class="w-12 h-12 rounded-xl bg-gray-800 flex items-center justify-center">
+              <iconify-icon icon="lucide:file-text" class="text-2xl text-gray-300"></iconify-icon>
+            </div>
+            <h3 class="text-xl font-bold">Taxation Simplified</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">
+              Demystifying the tax system in Bangladesh. Step-by-step guidance for absolute beginners.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-24 px-6 bg-gradient-to-b from-transparent to-[#0a0e27]">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white/5 p-8 rounded-3xl border border-white/5 reveal">
+            <div class="flex text-gray-300 mb-6">
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+            </div>
+            <p class="text-lg italic text-slate-300 mb-6">"My last guy charged me 1k for a website and it was a total mess, glad I switched. he did a way better job than the expensive guy, and it was much cheaper too."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-slate-700"></div>
+              <div>
+                <div class="font-bold">Kate Rodgers</div>
+                <div class="text-xs text-slate-500">Client</div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="bg-white/5 p-8 rounded-3xl border border-white/5 reveal" style="transition-delay: 200ms">
+            <div class="flex text-gray-300 mb-6">
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+              <iconify-icon icon="lucide:star" class="text-white/20"></iconify-icon>
+            </div>
+            <p class="text-lg italic text-slate-300 mb-6">"Being a freshman, he did a great job with taxation but annoying part he took sometime but the wait totally worth it. Im proud for young peopple like him"</p>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-slate-700"></div>
+              <div>
+                <div class="font-bold">Ahmed Reza</div>
+                <div class="text-xs text-slate-500">Business Owner</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="bg-white/5 p-8 rounded-3xl border border-white/5 reveal" style="transition-delay: 400ms">
+            <div class="flex text-gray-300 mb-6">
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+              <iconify-icon icon="lucide:star" class="fill-current"></iconify-icon>
+            </div>
+            <p class="text-lg italic text-slate-300 mb-6">"Bhaiya 10/10 with his work."</p>
+            <div class="flex items-center gap-4">
+              <div class="w-10 h-10 rounded-full bg-slate-700"></div>
+              <div>
+                <div class="font-bold">Arifa Chow.</div>
+                <div class="text-xs text-slate-500">Entrepreneur</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6">
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-16">
+        <div class="reveal">
+          <h2 class="text-4xl md:text-7xl font-bold mb-8">Ready for <br> a <span class="gradient-text">Big W?</span></h2>
+          <p class="text-xl text-slate-400 mb-12">Have a project in mind or need tech guidance? Drop a message and let's build something together.</p>
+          
+          <div class="space-y-6">
+            <a href="https://wa.me/8801992680919" id="contact-wa" class="flex items-center gap-6 p-6 rounded-3xl bg-gray-800/40 border border-gray-700 hover:bg-gray-800/60 transition-all">
+              <iconify-icon icon="logos:whatsapp-icon" class="text-4xl"></iconify-icon>
+              <div>
+                <div class="text-xs text-gray-400 font-bold uppercase tracking-widest mb-1">WhatsApp Me</div>
+                <div class="text-xl font-bold">+880 1992-680919</div>
+              </div>
+            </a>
+
+            <a href="mailto:tousifsiddique2006@gmail.com" id="contact-email" class="flex items-center gap-6 p-6 rounded-3xl bg-white/5 border border-white/10 hover:border-white/20 transition-all">
+              <div class="w-12 h-12 rounded-2xl bg-slate-800 flex items-center justify-center text-2xl text-white">
+                <iconify-icon icon="lucide:mail"></iconify-icon>
+              </div>
+              <div>
+                <div class="text-xs text-slate-500 font-bold uppercase tracking-widest mb-1">Email Me</div>
+                <div class="text-xl font-bold">tousifsiddique2006@gmail.com</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay: 200ms">
+          <div class="bg-white/5 p-8 md:p-12 rounded-[2.5rem] border border-white/10">
+            <form class="space-y-6" onsubmit="event.preventDefault();">
+              <div class="grid md:grid-cols-2 gap-6">
+                <div class="space-y-2">
+                  <label class="text-sm font-bold text-slate-500 px-2">NAME</label>
+                  <input type="text" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-gray-500 text-white transition-all" placeholder="Donald Trump">
+                </div>
+                <div class="space-y-2">
+                  <label class="text-sm font-bold text-slate-500 px-2">EMAIL</label>
+                  <input type="email" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-gray-500 text-white transition-all" placeholder="maga@example.com">
+                </div>
+              </div>
+              <div class="space-y-2">
+                <label class="text-sm font-bold text-slate-500 px-2">MESSAGE</label>
+                <textarea rows="4" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-gray-500 text-white transition-all" placeholder="Tell me about your project..."></textarea>
+              </div>
+              <button class="w-full py-5 bg-white text-slate-900 font-black rounded-2xl hover:bg-gray-200 transition-all uppercase tracking-widest">
+                Send Inquiry
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/5">
+      <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+        <div class="text-xl font-bold tracking-tighter">
+          TOUSIF<span class="gradient-text">.</span>
+        </div>
+        <div class="text-slate-500 text-sm">
+          &copy; 2026 Tousif Siddique. All rights reserved.
+        </div>
+        <div class="flex items-center gap-4 text-slate-400">
+          <div class="flex gap-4">
+            <a href="#" id="social-github" class="hover:text-white transition-colors"><iconify-icon icon="lucide:github" class="text-xl"></iconify-icon></a>
+            <a href="#" id="social-linkedin" class="hover:text-white transition-colors"><iconify-icon icon="lucide:linkedin" class="text-xl"></iconify-icon></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- JavaScript Animations -->
+  <script>
+    const observerOptions = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    window.addEventListener('scroll', () => {
+      const scrolled = window.pageYOffset;
+      const parallaxElements = document.querySelectorAll('.animate-float-custom');
+      parallaxElements.forEach(el => {
+        el.style.transform = `translateY(${scrolled * 0.03}px)`;
+      });
+    });
+  </script>
+
+</body>
+</html>
